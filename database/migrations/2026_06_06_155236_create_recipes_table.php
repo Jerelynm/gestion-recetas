@@ -14,7 +14,7 @@ return new class extends Migration
       Schema::create('recipes', function (Blueprint $table) {
     $table->id();
     $table->string('title');
-    $table->enum('category', ['entrada', 'plato fuerte', 'postre']);
+   $table->enum('category', ['entrada', 'plato fuerte', 'postre', 'bebida', 'sopa']);
     $table->integer('preparation_time');
     $table->foreignId('chef_id')->constrained('chefs')->onDelete('cascade');
     $table->timestamps();
